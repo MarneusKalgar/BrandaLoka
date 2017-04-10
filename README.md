@@ -1,5 +1,5 @@
-# gulp template
-template for the markup use pug, scss, bem-css, gulp
+# BrandaLoka
+Markup and coding for BrandaLoka
 
 ## Quick start
 
@@ -10,7 +10,7 @@ template for the markup use pug, scss, bem-css, gulp
 
 ## Directory Layout
 
-	gulptemplate                # Project root
+	BrandaLoka                  # Project root
 	├── /blocks/                # Source files
 	├── /app/                   # Compiled files for developing
 	├── /acc/                   # Minified files for production
