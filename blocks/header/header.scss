@@ -2,34 +2,66 @@
 .header {
 	box-sizing: border-box;
 	width: 100%;
-	border-bottom: 1px solid $base-color-grey;
-
-	&__wrap {
-		position: relative;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		width: $base-wrap-element-width;
-		min-height: 9.375em;
-		margin: 0 auto;
-		padding: 0;
-		@media screen and (max-width: $media-lg) {
-			width: 100%;
-			box-sizing: border-box;
-			padding: 0 1.25em;
-		}
-	}
+	padding: $base-element-padding * 5 0 $base-element-padding;
+	background: url("../img/header/header-bg.jpg") center no-repeat;
+	background-size: cover;
 
 	&__btn {
-		margin: 0 .5em;
-		@media screen and (max-width: $media-xs) {
-			display: none;
+		position: relative;
+		display: block;
+		width: 2.5em;
+		height: 2.5em;
+		margin: 4em auto 0;
+		background-color: $base-color-light-primary;
+		transform: rotateZ(45deg);
+		transition: all .3s ease-in;
+		&::before {
+			position: absolute;
+			content: "";
+			top: -40%;
+			left: -40%;
+			width: 70%;
+			height: 70%;
+			border: 2px solid $base-color-light-primary;
+		}
+		&:hover,
+		&:focus {
+			animation: pulse 1s infinite;
+			&::before {
+				animation: pulseBefore 1s infinite;
+			}
 		}
 	}
 
+	&__icon {
+		position: absolute;
+		top: .6em;
+		left: 25%;
+		width: 1.5em;
+		height: 1.5em;
+		transform: rotateZ(-45deg);
+		fill: $base-color-darker-secondary;
+		stroke: $base-color-darker-secondary;
+		stroke-width: 1px;
+	}
 }
 
+@keyframes pulse {
+	0% {
+		 transform: scale(1) rotateZ(45deg);
+	}
+	100% {
+		transform: scale(1.2) rotateZ(45deg);
+	}
+}
+@keyframes pulseBefore {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(.8);
+	}
+}
 
 
 

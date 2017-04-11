@@ -1,13 +1,65 @@
-extends template
+include _assets/bemto/bemto.pug
+- set_bemto_settings({ modifier: "--" })
 
-block content
-	+contacts({"class": "wow"})
+include head/head.pug
+
+include logo/logo.pug
+include menu-btn/menu-btn.pug
+include main-nav/main-nav.pug
+include scroll-to-top/scroll-to-top.pug
+
+include services/services.pug
+include contacts/contacts.pug
+include footer/footer.pug
 
 
-block footer
-	+footer({"class": "wow"})
+doctype html
+html(lang="ru")
 
-block scripts
-	// build:js js/main.js
-	script( src="js/main.js")
-	// endbuild
+
+	head
+		+head({
+			"title": "BrandaLOKA",
+			"author": "Igor Chernobay",
+			"description": "BrandaLOKA"
+		})
+
+	+b.BODY.page
+		+e.DIV.wrap
+			+b.HEADER.header#header
+				+e.DIV.wrap(class="wrapper")
+
+					//block main-nav
+					+main-nav()
+					//end block main-nav
+
+					// block menu-btn
+					+menu-btn()
+					// end block menu-btn
+
+					+e.A.btn(href="#")
+						+e.SVG.icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.4 7.7" width="16" height="16")
+							path(d="M14.3,0.1c-0.2-0.2-0.5-0.2-0.7,0L7.2,6.5L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9l6.7,6.7c0.1,0.1,0.2,0.1,0.4,0.1c0.1,0,0.3,0,0.4-0.1l6.7-6.7C14.4,0.7,14.4,0.3,14.3,0.1z")
+
+			+footer({"class": "wow"})
+
+		//-
+			+scroll-to-top({
+				"class": "page__scrollTop",
+				"link": "#header"
+			})
+
+
+		// build:js js/vendor.js
+		script( src="libs/jquery/dist/jquery.min.js")
+		//-script( src="libs/animsition/dist/js/animsition.min.js")
+		//-script( src="libs/jquery.maskedinput/dist/jquery.maskedinput.min.js")
+		script( src="libs/jquery-validation/dist/jquery.validate.min.js")
+		script( src="libs/wow/dist/wow.min.js")
+		//-script( src="libs/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js")
+		// endbuild
+
+
+		// build:js js/main.js
+		script( src="js/main.js")
+		// endbuild

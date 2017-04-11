@@ -10,7 +10,7 @@
 	font-size: $base-font-size;
 	line-height: $base-line-height;
 	font-family: $base-font-family;
-	color: $base-text-color;
+	color: $base-color-text;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 
@@ -38,21 +38,28 @@
 }
 
 
+.wrapper {
+	position: relative;
+	width: $base-wrap-element-width;
+	margin: 0 auto;
+	padding: 0;
+	@media screen and (max-width: $media-lg) {
+		width: 100%;
+		box-sizing: border-box;
+		padding: 0 1.25em;
+	}
+}
+
 /***** block to style headings *****/
 .titles {
 	width: 100%;
 	margin: 0;
-	font-weight: $heading-font-weight;
 	font-size: $heading-font-size;
 	line-height: $heading-line-height;
 	font-family: $heading-font-family;
 	letter-spacing: $heading-letter-spacing;
 	text-rendering: optimizeLegibility;
-	color: $heading-color;
 
-	&--dark {
-		color: $base-text-color;
-	}
 	@media screen and (max-width: $media-sm) {
 		font-size: $heading-font-size * .8;
 	}

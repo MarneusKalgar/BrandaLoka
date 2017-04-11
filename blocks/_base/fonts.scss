@@ -1,27 +1,27 @@
 @font-face {
-	font-family: 'Museo Sans Cyrl';
-	src: local('MuseoSansCyrl-300'),
-	url('../fonts/MuseoSansCyrl-300.woff2') format('woff2'),
-	url('../fonts/MuseoSansCyrl-300.woff') format('woff');
+	font-family: 'Homizio Nova';
+	src: local('HomizioNova-Light'),
+	url('../fonts/HomizioNova-Light.woff2') format('woff2'),
+	url('../fonts/HomizioNova-Light.woff') format('woff');
 	font-weight: 300;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Museo Sans Cyrl';
-	src: local('MuseoSansCyrl-500'),
-	url('../fonts/MuseoSansCyrl-500.woff2') format('woff2'),
-	url('../fonts/MuseoSansCyrl-500.woff') format('woff');
+	font-family: 'Homizio Nova';
+	src: local('HomizioNova-Italic'),
+	url('../fonts/HomizioNova-Italic.woff2') format('woff2'),
+	url('../fonts/HomizioNova-Italic.woff') format('woff');
 	font-weight: normal;
-	font-style: normal;
+	font-style: italic;
 }
 
 @font-face {
-	font-family: 'Museo Sans Cyrl';
-	src: local('MuseoSansCyrl-900'),
-	url('../fonts/MuseoSansCyrl-900.woff2') format('woff2'),
-	url('../fonts/MuseoSansCyrl-900.woff') format('woff');
-	font-weight: bold;
+	font-family: 'Homizio Nova';
+	src: local('HomizioNova'),
+	url('../fonts/HomizioNova.woff2') format('woff2'),
+	url('../fonts/HomizioNova.woff') format('woff');
+	font-weight: normal;
 	font-style: normal;
 }
 

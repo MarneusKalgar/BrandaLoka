@@ -1,7 +1,6 @@
 /*******************ABOUT******************/
 .about {
 	padding: 0;
-	color: $base-color-white;
 	text-align: center;
 	font-size: $base-font-size * 1.125;
 
@@ -13,12 +12,6 @@
 			box-sizing: border-box;
 			padding: 0 1.25em;
 		}
-	}
-
-	&__header {
-		padding: 2.7% 1em 22%;
-		background: $base-bg-color url("../img/about/about-bg.jpg") center no-repeat;
-		background-size: cover;
 	}
 
 	&__lead {
@@ -36,13 +29,5 @@
 		@media screen and (max-width: $media-md) {
 			width: 90%;
 		}
-	}
-
-	&__team {
-		margin-top: 4.4%;
-	}
-
-	&__vacancies {
-		margin-top: 7%;
 	}
 }
