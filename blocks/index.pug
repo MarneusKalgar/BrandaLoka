@@ -6,11 +6,14 @@ include head/head.pug
 include logo/logo.pug
 include menu-btn/menu-btn.pug
 include main-nav/main-nav.pug
-include scroll-to-top/scroll-to-top.pug
+include socials/socials.pug
+include achievements/achievements.pug
+
 
 include services/services.pug
 include contacts/contacts.pug
 include footer/footer.pug
+include scroll-to-top/scroll-to-top.pug
 
 
 doctype html
@@ -34,12 +37,33 @@ html(lang="ru")
 					//end block main-nav
 
 					// block menu-btn
-					+menu-btn()
+					//-+menu-btn()
 					// end block menu-btn
+
+					//block socials
+					+socials(
+						{"class": "wow"},
+						[
+							{"class": "--border --white", "id": "#facebook", "link": "https://facebook.com/"},
+							{"class": "--border --white", "id": "#twitter", "link": "https://twitter.com/"},
+							{"class": "--border --white", "id": "#dribbble", "link": "https://dribbble.com/"},
+							{"class": "--absolute --absolute_1 --border --white", "id": "#googleplus", "link": "https://plus.google.com/"},
+							{"class": "--absolute --absolute_2 --border --white", "id": "#skype", "link": "https://www.skype.com/"},
+							{"class": "--absolute --absolute_3 --border --white", "id": "#vimeo", "link": "https://www.skype.com/"}
+						]
+					)
+					//end block socials
 
 					+e.A.btn(href="#")
 						+e.SVG.icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.4 7.7" width="16" height="16")
 							path(d="M14.3,0.1c-0.2-0.2-0.5-0.2-0.7,0L7.2,6.5L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9l6.7,6.7c0.1,0.1,0.2,0.1,0.4,0.1c0.1,0,0.3,0,0.4-0.1l6.7-6.7C14.4,0.7,14.4,0.3,14.3,0.1z")
+			+b.MAIN.main
+				+achievements([
+					{"value": "863", "text": ""},
+					{"value": "921", "text": ""},
+					{"value": "572", "text": ""},
+					{"value": "159", "text": ""}
+				])
 
 			+footer({"class": "wow"})
 

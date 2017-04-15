@@ -1,4 +1,6 @@
 /************MAIN-NAV**************/
+$nav : main-nav;
+
 .main-nav {
 	width: 60em;
 	min-height: 37em;
@@ -13,6 +15,7 @@
 
 	&__row {
 		position: absolute;
+		pointer-events: none;
 
 		&--two {
 			top: 7.1em;
@@ -51,15 +54,29 @@
 		transform: rotateZ(45deg);
 		border: 2px solid $base-color-light-primary;
 		overflow: hidden;
+		background-color: rgba(0,0,0,0);
+		transition: all .4s ease;
+		pointer-events: auto;
+		&:hover:not(.#{$nav}__item--invisible):not(.#{$nav}__item--logo) {
+			background-color: rgba($base-color-light-primary, .1);
+			.#{$nav}__link {
+				color: lighten($base-decor-color, 10%);
+			}
+			.#{$nav}__icon {
+				fill: lighten($base-decor-color, 10%);
+			}
+		}
 
 		&--invisible {
 			opacity: 0;
 			visibility: hidden;
+			cursor: default;
 		}
 
 		&--logo {
 			overflow: visible;
 			border-color: rgba(0, 0, 0, 0);
+			cursor: default;
 		}
 
 		&--border {
@@ -72,7 +89,6 @@
 				background-color: $base-color-light-primary;
 			}
 		}
-
 		&--border_top-right_long {
 			&::before {
 				height: 13em;
@@ -80,8 +96,6 @@
 				left: -2px;
 			}
 		}
-
-
 		&--border_bottom-left_long {
 			&::after {
 				height: 13em;
@@ -89,30 +103,26 @@
 				right: -2px;
 			}
 		}
-
-		&--border_bottom-left_short {
+		&--border_bottom-left_long2x {
 			&::after {
-				height: 10em;
-				top: 100%;
+				height: 32em;
+				top: -120%;
 				right: -2px;
 			}
 		}
-
 		&--border_top-left_short {
 			&::before {
-				height: 6em;
-				top: -3.05em;
-				left: -3em;
+				height: 9em;
+				top: -4.55em;
+				left: -4.7em;
 				transform: rotateZ(90deg);
 			}
 		}
-
 		&--border_top-right_short {
 			&::after {
 				height: 6em;
 				top: -3.05em;
 				left: -3em;
-				//transform: rotateZ(90deg);
 			}
 		}
 	}
@@ -131,7 +141,6 @@
 		}
 
 		&--image {
-
 			position: absolute;
 			//content: "";
 			top: 50%;
@@ -155,22 +164,26 @@
 
 	&__link {
 		position: relative;
-		z-index: 400;
-		padding-top: 3em;
+		z-index: 1000;
+		min-height: 2em;
+		padding-top: 1.5em;
+		line-height: 2em;
 		font-size: $base-font-size * 1.25;
 		color: $base-color-light-primary;
 		text-decoration: none;
 		cursor: pointer;
+		transition: all .4s ease;
 	}
 
 	&__icon {
 		position: absolute;
-		top: 0;
+		top: -.6em;
 		left: 50%;
-		width: 3em;
-		height: 3em;
+		width: 2.5em;
+		height: 2.5em;
 		transform: translateX(-50%);
 		fill: $base-color-light-primary;
 		fill-rule: evenodd;
+		transition: all .4s ease;
 	}
 }

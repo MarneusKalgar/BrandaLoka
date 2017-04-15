@@ -1,0 +1,81 @@
+/*!******************SOCIALS******************/
+$socials : socials;
+
+.socials {
+	position: absolute;
+	top: 0;
+	right: 9em;
+	display: flex;
+	flex-wrap: wrap;
+	width: 14em;
+	height: 12em;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+
+	&__item {
+		position: relative;
+		width: 3em;
+		height: 3em;
+		cursor: pointer;
+		transition: all .3s ease .1s;
+
+		&--absolute {
+			position: absolute;
+		}
+
+		&--absolute_1 {
+			top: 4em;
+			left: 2.3em;
+		}
+
+		&--absolute_2 {
+			top: 4.5em;
+			right: 0;
+		}
+
+		&--absolute_3 {
+			top: 7em;
+			right: 2.5em;
+		}
+
+		&--border {
+			margin: .7em;
+			transform: rotateZ(45deg);
+			border: 2px solid $base-color-light-primary;
+			&:hover {
+				background-color: rgba($base-color-light-primary, .1);
+			}
+		}
+
+		&--white {
+			.#{$socials}__icon {
+				fill: $base-color-light-primary;
+			}
+		}
+	}
+
+	&__link {
+		position: relative;
+		display: block;
+		width: 100%;
+		height: 100%;
+		transform: rotateZ(-45deg);
+		&:hover,
+		&:focus {
+			.#{$socials}__icon {
+				fill: lighten($base-decor-color, 5%);
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 1.3em;
+		height: 1.3em;
+		transition: all .4s ease;
+	}
+}
