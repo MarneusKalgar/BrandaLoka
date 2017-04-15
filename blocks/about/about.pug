@@ -1,5 +1,27 @@
+//-include ../viewSlider/viewSlider.pug
+
 mixin about
-	+b.MAIN.about
-		+e.DIV.wrap
-			+e.H1.title(class="titles") О нас
+	+b.SECTION.about
+		+e.DIV.wrap(class="wrapper")
+			+e.H2.title(class="titles") About
+				+e.STRONG.strong(class="strong")  us
+			+e.P.lead Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat dicta sunt explicabo
+
+			+viewSlider(
+				{"class": "about__slider"},
+				[
+					{"class": "--isActive"},
+					{"class": ""},
+					{"class": ""}
+				],
+				[
+					{"class": "--isActive"},
+					{"class": ""},
+					{"class": ""}
+				]
+			)
+
+			+e.P.text uspendisse consequat nisl et consectetur hendrerit. Cras sit amet turpis ut purus pellentesque ullamcorper sed ut nisl. Insed vulputate libero. Nullam nec auctor elit, vitae mattis.
+			+e.P.text commodo. Suspendisse tincidunt orci ultrices, viverra maurisa, tristique mauris. Curabitur pretium pellentesque risus, inadipiscing tortor consequat id.
 		
+			+b.A.btn(class="--filled about__btn") Learn more

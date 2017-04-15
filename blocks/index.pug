@@ -8,7 +8,8 @@ include menu-btn/menu-btn.pug
 include main-nav/main-nav.pug
 include socials/socials.pug
 include achievements/achievements.pug
-
+include about/about.pug
+include viewSlider/viewSlider.pug
 
 include services/services.pug
 include contacts/contacts.pug
@@ -18,7 +19,6 @@ include scroll-to-top/scroll-to-top.pug
 
 doctype html
 html(lang="ru")
-
 
 	head
 		+head({
@@ -54,16 +54,22 @@ html(lang="ru")
 					)
 					//end block socials
 
-					+e.A.btn(href="#")
+					+e.A.btn(href="#achievements")
 						+e.SVG.icon(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.4 7.7" width="16" height="16")
 							path(d="M14.3,0.1c-0.2-0.2-0.5-0.2-0.7,0L7.2,6.5L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9l6.7,6.7c0.1,0.1,0.2,0.1,0.4,0.1c0.1,0,0.3,0,0.4-0.1l6.7-6.7C14.4,0.7,14.4,0.3,14.3,0.1z")
 			+b.MAIN.main
+				//block achievements
 				+achievements([
-					{"value": "863", "text": ""},
-					{"value": "921", "text": ""},
-					{"value": "572", "text": ""},
-					{"value": "159", "text": ""}
+					{"value": "863", "text": "Projects work"},
+					{"value": "921", "text": "Facebook likes"},
+					{"value": "572", "text": "Tutorials create"},
+					{"value": "159", "text": "Coffees made"}
 				])
+				//end block achievements
+
+				//block about
+				+about()
+				//end block about
 
 			+footer({"class": "wow"})
 

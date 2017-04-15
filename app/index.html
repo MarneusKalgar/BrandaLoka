@@ -67,7 +67,9 @@
               <li class="main-nav__row main-nav__row--three">
                 <ul class="main-nav__submenu">
                   <li class="main-nav__item main-nav__item--logo">
-                    <div class="main-nav__content main-nav__content--logo"><a class="logo" id="logo" href="#"><img class="logo__img" src="img/logo/BrandaLOKA-logo.svg" alt="BrandaLOKA logo" title=""/></a>
+                    <div class="main-nav__content main-nav__content--logo">
+                      <h1 class="logo" id="logo"><a class="logo__link" href="#"><img class="logo__img" src="img/logo/BrandaLOKA-logo.svg" alt="BrandaLOKA logo" title=""/></a>
+                      </h1>
                     </div>
                   </li>
                   <li class="main-nav__item">
@@ -163,45 +165,104 @@
               </svg></a>
             </li>
           </ul>
-          <!--end block socials--><a class="header__btn" href="#">
+          <!--end block socials--><a class="header__btn" href="#achievements">
           <svg class="header__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.4 7.7" width="16" height="16">
             <path d="M14.3,0.1c-0.2-0.2-0.5-0.2-0.7,0L7.2,6.5L0.9,0.1C0.7,0,0.3,0,0.1,0.1S0,0.7,0.1,0.9l6.7,6.7c0.1,0.1,0.2,0.1,0.4,0.1c0.1,0,0.3,0,0.4-0.1l6.7-6.7C14.4,0.7,14.4,0.3,14.3,0.1z"></path>
           </svg></a>
         </div>
       </header>
       <main class="main" role="main">
-        <srction class="achievements">
-          <h2 class="achievements__title titles">What<strong class="achievements__strong strong">we</strong>do
-          </h2>
-          <p class="achievements__desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat dicta sunt explicabo. Nemo enim ipsam voluptatem quia. sit amet turpis ut purus pellentesque ullamcorper sed ut nisl.
-          </p>
-          <ul class="achievements__list">
-            <li class="achievements__item">
-              <h3 class="achievements__value">863
-              </h3>
-              <p class="achievements__text">
-              </p>
-            </li>
-            <li class="achievements__item">
-              <h3 class="achievements__value">921
-              </h3>
-              <p class="achievements__text">
-              </p>
-            </li>
-            <li class="achievements__item">
-              <h3 class="achievements__value">572
-              </h3>
-              <p class="achievements__text">
-              </p>
-            </li>
-            <li class="achievements__item">
-              <h3 class="achievements__value">159
-              </h3>
-              <p class="achievements__text">
-              </p>
-            </li>
-          </ul>
-        </srction>
+        <!--block achievements-->
+        <section class="achievements" id="achievements">
+          <div class="achievements__wrap wrapper">
+            <h2 class="achievements__title titles">What<strong class="achievements__strong strong"> we</strong> do
+            </h2>
+            <p class="achievements__desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat dicta sunt explicabo. Nemo enim ipsam voluptatem quia. sit amet turpis ut purus pellentesque ullamcorper sed ut nisl.
+            </p>
+            <ul class="achievements__list">
+              <li class="achievements__item">
+                <div class="achievements__content">
+                  <h3 class="achievements__value">863
+                  </h3>
+                  <p class="achievements__text">Projects work
+                  </p>
+                </div>
+              </li>
+              <li class="achievements__item">
+                <div class="achievements__content">
+                  <h3 class="achievements__value">921
+                  </h3>
+                  <p class="achievements__text">Facebook likes
+                  </p>
+                </div>
+              </li>
+              <li class="achievements__item">
+                <div class="achievements__content">
+                  <h3 class="achievements__value">572
+                  </h3>
+                  <p class="achievements__text">Tutorials create
+                  </p>
+                </div>
+              </li>
+              <li class="achievements__item">
+                <div class="achievements__content">
+                  <h3 class="achievements__value">159
+                  </h3>
+                  <p class="achievements__text">Coffees made
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <!--end block achievements-->
+        <!--block about-->
+        <section class="about">
+          <div class="about__wrap wrapper">
+            <h2 class="about__title titles">About<strong class="about__strong strong"> us</strong>
+            </h2>
+            <p class="about__lead">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beat dicta sunt explicabo
+            </p>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
+              <symbol id="next" viewBox="0 0 13.2 25">
+                <path d="M13,12L1.2,0.2c-0.3-0.3-0.7-0.3-1,0s-0.3,0.7,0,1l11.3,11.3L0.2,23.8c-0.3,0.3-0.3,0.7,0,1C0.3,24.9,0.5,25,0.7,25c0.2,0,0.4-0.1,0.5-0.2L13,13C13.3,12.7,13.3,12.3,13,12z"></path>
+              </symbol>
+            </svg>
+            <div class="viewSlider about__slider">
+              <ul class="viewSlider__slider">
+                <li class="viewSlider__slide viewSlider__slide--isActive">
+                </li>
+                <li class="viewSlider__slide">
+                </li>
+                <li class="viewSlider__slide">
+                </li>
+              </ul>
+              <ul class="viewSlider__dots">
+                <li class="viewSlider__dot viewSlider__dot--isActive">
+                </li>
+                <li class="viewSlider__dot">
+                </li>
+                <li class="viewSlider__dot">
+                </li>
+              </ul>
+              <button class="viewSlider__control viewSlider__control--prev" type="button">
+                <svg class="viewSlider__icon" width="16" height="16">
+                  <use xlink:href="#next"></use>
+                </svg>
+              </button>
+              <button class="viewSlider__control viewSlider__control--next" type="button">
+                <svg class="viewSlider__icon" width="16" height="16">
+                  <use xlink:href="#next"></use>
+                </svg>
+              </button>
+            </div>
+            <p class="about__text">uspendisse consequat nisl et consectetur hendrerit. Cras sit amet turpis ut purus pellentesque ullamcorper sed ut nisl. Insed vulputate libero. Nullam nec auctor elit, vitae mattis.
+            </p>
+            <p class="about__text">commodo. Suspendisse tincidunt orci ultrices, viverra maurisa, tristique mauris. Curabitur pretium pellentesque risus, inadipiscing tortor consequat id.
+            </p><a class="btn btn--filled about__btn">Learn more</a>
+          </div>
+        </section>
+        <!--end block about-->
       </main>
       <footer class="footer wow">
         <div class="footer__wrap">

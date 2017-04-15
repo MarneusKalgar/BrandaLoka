@@ -1,9 +1,7 @@
 mixin logo(item)
-	+b.A()&attributes({
-		"id": item.id,
-		"class": item.class,
-		"href": item.href
-	})
-		//-picture
-		//-	source(media="(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)", srcset=item.set)
-		+e.IMG.img(src=item.src, alt=item.alt)
+	+b.H1.logo#logo
+		+e.A.link()&attributes({
+			"id": item.id,
+			"href": item.href
+		})
+			+e.IMG.img(src=item.src, alt=item.alt)

@@ -1,33 +1,29 @@
 /*******************ABOUT******************/
 .about {
-	padding: 0;
-	text-align: center;
+	padding: $base-element-padding * 2 0;
 	font-size: $base-font-size * 1.125;
-
-	&__wrap {
-		max-width: $base-wrap-element-width;
-		margin: 0 auto;
-		@media screen and (max-width: $media-lg) {
-			width: 100%;
-			box-sizing: border-box;
-			padding: 0 1.25em;
-		}
-	}
+	background-color: $base-color-light-secondary;
 
 	&__lead {
-		width: 39em;
-		margin: 1em auto;
-		font-weight: bold;
-		@media screen and (max-width: $media-md) {
-			width: 90%;
-		}
+		width: 90%;
+		margin: 2em auto 0;
+		font-size: $base-font-size * 1.25;
+		text-align: center;
 	}
 
 	&__text {
-		width: 39em;
-		margin: 1em auto;
-		@media screen and (max-width: $media-md) {
-			width: 90%;
-		}
+		margin: 2em auto 0;
+	}
+
+	&__btn {
+		width: 9em;
+		margin-top: 3em;
+	}
+
+	&__slider {
+		float: right;
+		width: 50%;
+		min-height: 16em;
+		margin-top: 2em;
 	}
 }

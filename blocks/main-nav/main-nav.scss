@@ -137,7 +137,7 @@ $nav : main-nav;
 		transform: rotateZ(-45deg);
 
 		&--logo {
-			transform: rotateZ(-90deg) translate(35%, 15%) scale(2);
+			transform: rotateZ(-90deg) //translate(35%, 15%) scale(2);
 		}
 
 		&--image {

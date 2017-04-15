@@ -1,0 +1,18 @@
+mixin viewSlider(context, slider, dots)
+	svg(xmlns="http://www.w3.org/2000/svg", style="display:none;")
+		symbol(id="next", viewBox="0 0 13.2 25")
+			path(d="M13,12L1.2,0.2c-0.3-0.3-0.7-0.3-1,0s-0.3,0.7,0,1l11.3,11.3L0.2,23.8c-0.3,0.3-0.3,0.7,0,1C0.3,24.9,0.5,25,0.7,25c0.2,0,0.4-0.1,0.5-0.2L13,13C13.3,12.7,13.3,12.3,13,12z")
+
+	+b.DIV.viewSlider(class=context.class)
+		+e.UL.slider
+			each slide in slider
+				+e.slide(class=slide.class)
+		+e.UL.dots
+			each dot in dots
+				+e.dot(class=dot.class)
+		+e.BUTTON.control(type="button", class="--prev")
+			+e.SVG.icon(width="16" height="16")
+				use(xlink:href="#next")
+		+e.BUTTON.control(type="button", class="--next")
+			+e.SVG.icon(width="16" height="16")
+				use(xlink:href="#next")
