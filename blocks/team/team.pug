@@ -1,0 +1,11 @@
+mixin team(items)
+	+b.SECTION.team
+		+e.DIV.wrap(class="wrapper")
+			+e.H2.title(class="titles") Our
+				+e.STRONG.strong(class="strong")  team
+			+e.UL.list
+				each item in items
+					+e.item
+						+e.DIV.img-wrap
+							+e.IMG.img(src="img/team/" + item.src + ".jpg", alt="teammate photo")
+						+e.P.text= item.text

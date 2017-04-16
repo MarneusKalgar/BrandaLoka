@@ -1,0 +1,90 @@
+/***********************FEATURES***********************/
+.features {
+	position: relative;
+	padding: $base-element-padding * 2 0 $base-element-padding;
+	background-color: rgba($base-color-darker-secondary, .8);
+	color: $base-color-light-primary;
+	&::before {
+		content: "";
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: url("../img/features/features-bg.jpg") center no-repeat;
+		background-size: cover;
+		filter: blur(2px);
+	}
+
+	&__row {
+		@include row-flex();
+		margin-top: 3em;
+	}
+
+
+	&__figure {
+		@include col-7;
+		margin: 0;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 100%;
+	}
+
+	&__list {
+		@include col-5;
+		padding: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+		margin-top: 3em;
+		padding: 0 2em 0 6em;
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__caption {
+		margin: 0;
+		font-size: $base-font-size * 1.5;
+		font-weight: normal;
+	}
+
+	&__text {
+		margin: 0;
+	}
+
+	&__icon-wrap {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 4em;
+		height: 4em;
+		border: 2px solid $base-color-light-primary;
+		transform: translateY(-50%) rotateZ(45deg);
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 2em;
+		height: 2em;
+		transform: translate(-50%, -50%) rotateZ(-45deg);
+		fill: $base-color-light-primary;
+	}
+
+	&__btn {
+		width: 9em;
+		margin-top: 2em;
+		font-size: $base-font-size * 1.125;
+	}
+}

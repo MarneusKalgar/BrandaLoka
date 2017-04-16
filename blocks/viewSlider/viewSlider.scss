@@ -5,15 +5,40 @@ $slider : viewSlider;
 	position: relative;
 	background-color: $base-color-darker-primary;
 
+	//slider
 	&__slider {
 		position: relative;
 		width: 100%;
 		height: 100%;
+		min-height: 16em;
 		margin: 0;
 		padding: 0;
 		list-style-type: none;
 	}
 
+	&__slide {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transition: all .3s ease;
+		
+		&--isActive {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+
+	//dots
 	&__dots {
 		position: absolute;
 		top: 105%;
@@ -34,9 +59,15 @@ $slider : viewSlider;
 		transform: rotateZ(45deg);
 		cursor: pointer;
 		transition: all .3s ease;
+		&:hover {
+			background-color: darken($base-color-darker-primary, 10%);
+		}
 		
 		&--isActive {
 			background-color: $base-decor-color;
+			&:hover {
+				background-color: $base-decor-color;
+			}
 		}
 	}
 

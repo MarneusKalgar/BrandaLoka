@@ -1,0 +1,41 @@
+/**********************TEAM***********************/
+.team {
+	margin-top: 3em;
+
+	&__list {
+		display: flex;
+		justify-content: center;
+		margin: 2em 0 0;
+		padding: 0;
+		list-style: none;
+		text-align: center;
+	}
+	
+	&__item {
+		box-sizing: border-box;
+		width: 20%;
+		margin: 3.5em;
+	}
+
+	&__img-wrap {
+		transform: rotateZ(45deg);
+		overflow: hidden;
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: auto;
+		max-height: 100%;
+		transform: rotateZ(-45deg) scale(1.4);
+	}
+
+	&__text {
+		margin: 3em 0 0;
+		color: $base-decor-color;
+		font-size: $base-font-size * 1.125;
+	}
+
+
+	
+}

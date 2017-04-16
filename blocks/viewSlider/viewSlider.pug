@@ -7,6 +7,7 @@ mixin viewSlider(context, slider, dots)
 		+e.UL.slider
 			each slide in slider
 				+e.slide(class=slide.class)
+					+e.IMG.img(src=slide.src, alt="about BrandaLOKA")
 		+e.UL.dots
 			each dot in dots
 				+e.dot(class=dot.class)

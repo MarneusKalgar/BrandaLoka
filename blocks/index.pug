@@ -10,8 +10,10 @@ include socials/socials.pug
 include achievements/achievements.pug
 include about/about.pug
 include viewSlider/viewSlider.pug
-
 include services/services.pug
+include features/features.pug
+include partners/partners.pug
+include team/team.pug
 include contacts/contacts.pug
 include footer/footer.pug
 include scroll-to-top/scroll-to-top.pug
@@ -70,6 +72,64 @@ html(lang="ru")
 				//block about
 				+about()
 				//end block about
+
+				//block services
+				+services([
+					{	"id": "#chart",
+						"caption": "Adipiscing tortor",
+						"text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."
+					},
+					{	"id": "#cloud",
+						"caption": "Adipiscing tortor",
+						"text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."
+					},
+					{	"id": "#location",
+						"caption": "Adipiscing tortor",
+						"text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."
+					},
+					{	"id": "#alarm",
+						"caption": "Adipiscing tortor",
+						"text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."
+					},
+					{	"id": "#eye",
+						"caption": "Adipiscing tortor",
+						"text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."
+					},
+					{	"id": "#code",
+						"caption": "Adipiscing tortor",
+						"text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."
+					}
+				])
+				//end services
+
+				//block features
+				+features([
+					{"caption": "Adipiscing tortor", "text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."},
+					{"caption": "Adipiscing tortor", "text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."},
+					{"caption": "Adipiscing tortor", "text": "Morbi condimentum leo sedsollicitudin pulvinar.Phasellusrutrum interdum elit quis."}
+				])
+				//end block features
+
+				//block partners
+				+partners([
+					{"src": "audiojungle"},
+					{"src": "3docean"},
+					{"src": "themeforest"},
+					{"src": "graphicriver"},
+					{"src": "codecanyon"},
+					{"src": "photodune"},
+					{"src": "videohive"}
+				])
+				//end block partners
+
+				//block team
+				+team([
+					{"src": "team1", "text": "CEO / Founder	"},
+					{"src": "team2", "text": "Manager"},
+					{"src": "team3", "text": "Web developer"},
+					{"src": "team4", "text": "Web designer"}
+				])
+				//end block team
 
 			+footer({"class": "wow"})
 

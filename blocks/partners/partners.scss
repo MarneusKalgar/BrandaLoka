@@ -1,0 +1,81 @@
+/***********************PARTNERS***********************/
+$partners : partners;
+
+.partners {
+	position: relative;
+	//margin-top: -3em;
+	background-color: $base-color-light-primary;
+
+	&__slider-wrap {
+		position: relative;
+		z-index: 400;
+		margin: 0 10%;
+		padding: 2em 0;
+		overflow: hidden;
+		background-color: $base-color-light-primary;
+	}
+
+	&__slider {
+		display: flex;
+		align-items: center;
+		box-sizing: border-box;
+		width: 175%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__slide {
+		width: 25%;
+	}
+
+	&__img {
+		display: block;
+		width: 90%;
+		height: auto;
+		max-height: 100%;
+		margin: 0 auto;
+	}
+
+	&__control {
+		position: absolute;
+		z-index: 500;
+		top: 50%;
+		width: 3em;
+		height: 3em;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background-color: $base-decor-color;
+		outline: none;
+		-webkit-appearance: none;
+		cursor: pointer;
+		transform: translateY(-50%) rotateZ(45deg);
+		transition: all .3s ease;
+		&:hover,
+		&:focus {
+			background-color: darken($base-decor-color, 10%);
+		}
+
+		&--prev {
+			left: 5%;
+			.#{$partners}__icon {
+				transform: translate(-55%, -45%) rotateZ(135deg);
+			}
+		}
+
+		&--next {
+			right: 5%;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 50%;
+		height: 50%;
+		transform: translate(-45%, -55%) rotateZ(-45deg);
+		fill: $base-color-light-primary;
+	}
+}
