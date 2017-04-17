@@ -1,0 +1,131 @@
+/***********************POSTS***********************/
+$posts : posts;
+
+.posts {
+	padding: $base-element-padding * 2 0 $base-element-padding;
+	background-color: $base-color-light-secondary;
+
+	&__title {
+
+		&--article {
+			margin: 0;
+		}
+	}
+
+	&__list {
+		@include row-flex();
+		@include justify-content(center);
+		margin-top: 2em;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		@include col-4();
+		background-color: $base-color-light-primary;
+		margin: 25px;
+		border-bottom: 3px solid rgba(0,0,0,0);
+		transition: all .4s ease;
+		&:hover {
+			border-color: $base-decor-color;
+			.#{$posts}__header::after { opacity: 1; }
+			.#{$posts}__anchor { opacity: 1; }
+		}
+	}
+
+		//header
+	&__header {
+		position: relative;
+		height: 14em;
+		&::after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($base-color-light-primary, .4);
+			opacity: 0;
+			transition: all .4s ease;
+		}
+	}
+	
+	&__anchor {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 100;
+		width: 3em;
+		height: 3em;
+		background-color: $base-decor-color;
+		transform: translate(-50%, -50%) rotateZ(45deg);
+		opacity: 0;
+		transition: all .4s ease;
+		&:hover,
+		&:focus {
+			background-color: darken($base-decor-color, 10%);
+		}
+	}
+
+	&__icon {
+		width: 1.3em;
+		height: 1.3em;
+		fill: $base-decor-color;
+
+		&--header {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 50%;
+			height: 50%;
+			transform: translate(-50%, -50%) rotateZ(-45deg);
+			fill: $base-color-light-primary;
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+		//content
+	&__content {
+		padding: 1em 1em 0;
+	}
+
+		//footer
+	&__footer {
+		display: flex;
+		padding: 0 1em 1.5em;
+	}
+
+	&__content-wrap {
+		display: flex;
+		align-items: center;
+		padding-right: 10%;
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+
+	&__date {
+		display: inline-block;
+		margin-left: .5em;
+	}
+
+	&__comments {
+		display: inline-block;
+		margin-left: .5em;
+	}
+
+	&__btn {
+		width: 9em;
+		margin: 2em auto 0;
+		font-size: $base-font-size * 1.125;
+	}
+
+
+}

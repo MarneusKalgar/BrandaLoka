@@ -57,6 +57,7 @@
 	font-size: $heading-font-size;
 	line-height: $heading-line-height;
 	font-family: $heading-font-family;
+	font-weight: normal;
 	letter-spacing: .05em;
 	text-align: center;
 	text-rendering: optimizeLegibility;
@@ -67,5 +68,12 @@
 }
 
 .strong {
+	font-weight: bold;
 	color: $base-decor-color;
 }
+
+//::-moz-placeholder
+//:-ms-input-placeholder
+//::-webkit-input-placeholder {
+//	color: #fff;
+//}

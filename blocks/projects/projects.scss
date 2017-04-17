@@ -1,0 +1,82 @@
+/***********************PROJECTS***********************/
+$projects : projects;
+
+.projects {
+	padding: $base-element-padding 0;
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 3em 0 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+		width: 16.666666666666666666666666666667%;
+		@include media("<$media-lg") {
+			width: 25%;
+		}
+		@include media("<=$media-sm") {
+			width: 33.333333333333333333333333333%;
+		}
+		@include media("<=$media-xs") {
+			width: 50%;
+		}
+		@include media("<=400px") {
+			width: 100%;
+		}
+	}
+
+	&__link {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		text-decoration: none;
+		outline: none;
+		&::after {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba($base-color-light-primary, .6);
+			opacity: 0;
+			transition: all .4s ease;
+		}
+		&:hover,
+		&:focus {
+			&::after { opacity: 1; }
+			.#{$projects}__caption { opacity: 1; }
+		}
+	}
+
+	&__img {
+		display: block;
+		width: 100%;
+		height: 100%;
+		object-fit: fill;
+	}
+
+	&__caption {
+		position: absolute;
+		z-index: 100;
+		top: 50%;
+		left: 0;
+		box-sizing: border-box;
+		width: 100%;
+		margin: 0;
+		padding: 5%;
+		font-size: $base-font-size * 1.5;
+		letter-spacing: .05em;
+		text-align: center;
+		color: $base-decor-color;
+		text-shadow: .1em .1em .1em rgba($base-color-darker-secondary, .5);
+		transform: translate(0, -50%);
+		opacity: 0;
+		transition: all .4s ease;
+	}
+}

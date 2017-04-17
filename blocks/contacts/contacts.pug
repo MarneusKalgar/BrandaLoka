@@ -1,17 +1,22 @@
-mixin contacts(item)
-	+b.SECTION.contacts(class=item.class)
-		+e.DIV.wrap
-			+e.DIV.content
-				+e.H1.title(class="titles") С нами легко связаться!
-				+e.P.address(class="--color") пр-т Степана Бандеры, 21,
-				+e.P.address Киев, 03186, Украина
-				+e.P.schedule Пн &mdash; Сб,
-					+e.SPAN.strong  с 10:00 по 19:00
-				+e.A.link(class="--tel --single", href="tel:+380937772255") +380 (93) 777 - 22 - 55
-				+e.A.link(class="--tel --single", href="tel:+380937772255") +380 (93) 777 - 22 - 55
-				+e.A.link(class="--mail --single", href="mailto:hello@interact.com") hello@interact.com
-		+e.DIV.map#map
-		//-else
-		//-	+e.A.link(class="--tel", href="tel:+380937772255") +380 (93) 777 - 22 - 55
-		//-	+e.P.desc пр-т Степана Бандеры, 21, Киев, Украина
-		//-	+e.A.link(class="--mail", href="mailto:hello@interact.com") hello@interact.com
+mixin contacts
+	+b.SECTION.contacts
+		+e.DIV.wrap(class="wrapper")
+			+e.H2.title(class="titles") Get in
+				+e.STRONG.strong(class="strong")  touch
+			+e.P.desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+			+e.FORM.form(action="#", method="POST")
+				+e.DIV.content
+					+e.DIV.col
+						+e.FIELDSET.set(class="--required")
+							+e.INPUT.input(type="text", required, aria-required="true", placeholder="Name")
+						+e.FIELDSET.set(class="--required")
+							+e.INPUT.input(type="email", required, aria-required="true", placeholder="Email")
+						+e.FIELDSET.set
+							+e.INPUT.input(type="text", placeholder="Subject")
+					+e.DIV.col
+						+e.FIELDSET.set(class="--area --required")
+							+e.TEXTAREA.area(required, aria-required="true", placeholder="Message")
+
+					+e.INPUT.submit(class="btn --filled", type="submit", value="Subscribe now")
+
+		//-+e.DIV.map#map

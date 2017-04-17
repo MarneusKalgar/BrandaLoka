@@ -10,6 +10,7 @@
 	cursor: pointer;
 	-webkit-appearance: none;
 	transition: all .4s cubic-bezier(0.2, 1, 0.3, 1);
+	font-family: inherit;
 
 	&--filled {
 		position: relative;

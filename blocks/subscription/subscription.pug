@@ -1,0 +1,10 @@
+mixin subscription
+	+b.SECTION.subscription
+		+e.DIV.wrap(class="wrapper")
+			+e.H2.title(class="titles") Subscribe
+				+e.STRONG.strong(class="strong")  our
+				|  newsletter
+			+e.P.desc Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.
+			+e.FORM.form(action="#", method="POST")
+				+e.INPUT.input(type="text", required, aria-required="true", placeholder="enter your email address")
+				+e.INPUT.submit(class="btn --filled", type="submit", value="Subscribe now")

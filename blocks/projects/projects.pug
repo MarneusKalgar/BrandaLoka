@@ -1,0 +1,11 @@
+mixin projects(items)
+	+b.SECTION.projects
+		+e.H2.title(class="titles") Our
+			+e.STRONG.strong(class="strong")  latest
+			|  projects
+		+e.UL.list
+			each item in items
+				+e.item
+					+e.A.link(href="#")
+						+e.IMG.img(src="img/projects/" + item.src + ".jpg", alt="project img")
+						+e.H3.caption= item.caption

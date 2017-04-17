@@ -2,12 +2,82 @@
 .contacts {
 	position: relative;
 	box-sizing: border-box;
-	padding: $base-element-padding * 2 0;
-	font-size: $base-font-size * 1.125;
+	padding: $base-element-padding 0;
 
-	&__wrap {
-		position: relative;
-		z-index: 400;
-		box-sizing: border-box;
+	&__desc {
+		margin: $base-element-padding auto 0;
+		text-align: center;
 	}
+
+	&__form {
+		margin-top: $base-element-padding;
+	}
+
+	&__content {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__col {
+		width: 49%;
+	}
+
+	&__set {
+		position: relative;
+		box-sizing: border-box;
+		margin: 1em 0 0;
+		padding: 0 1em;
+		border: none;
+		background-color: $base-color-light-secondary;
+		&:first-child {
+			margin: 0;
+		}
+
+		&--required::after {
+			content: "*";
+			position: absolute;
+			right: .8em;
+			top: .4em;
+			font-size: $base-font-size * 1.5;
+			font-weight: bold;
+			color: $base-decor-color;
+		}
+
+		&--area {
+			height: 100%;
+		}
+	}
+
+	&__input {
+		display: block;
+		width: 100%;
+		height: 4em;
+		border: none;
+		outline: none;
+		background-color: rgba(0,0,0,0);
+		-webkit-appearance: none;
+	}
+
+	&__area {
+		display: block;
+		box-sizing: border-box;
+		width: 100%;
+		height: 100%;
+		padding: 1.5em 0 0;
+		border: none;
+		outline: none;
+		background-color: rgba(0,0,0,0);
+		-webkit-appearance: none;
+		resize: none;
+	}
+
+	&__submit {
+		width: 9em;
+		margin: 3em auto 0;
+		font-size: $base-font-size * 1.125;
+	}
+
+
+
 }

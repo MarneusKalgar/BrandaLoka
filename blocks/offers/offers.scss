@@ -1,0 +1,60 @@
+/***********************OFFERS***********************/
+$offers : offers;
+
+.offers {
+	padding: $base-element-padding 0;
+	background-color: $base-color-light-secondary;
+
+	&__list {
+		@include row-flex();
+		@include justify-content(center);
+		margin-top: $base-element-padding;
+		padding: 0;
+		list-style: none;
+	}
+
+	&__item {
+		box-sizing: border-box;
+		@include col-4();
+		margin: 25px;
+		background-color: $base-color-light-primary;
+		padding: 2em 1em;
+		text-align: center;
+		font-size: $base-font-size * 1.125;
+		&:hover {
+			.#{offers}__price {
+				color: $base-decor-color;
+			}
+			.#{offers}__plan {
+				color: $base-decor-color;
+			}
+			.#{offers}__btn {
+				background-color: $base-decor-color;
+			}
+		}
+	}
+
+	&__plan {
+		margin: 0;
+		transition: all .3s ease;
+	}
+
+	&__price {
+		font-size: 2.5em;
+		font-weight: normal;
+		margin: .5em 0;
+		transition: all .3s ease;
+	}
+
+	&__text {
+		padding: 0 10%;
+		line-height: 2;
+	}
+
+	&__btn {
+		width: 9em;
+		margin: 2em auto 0;
+		background-color: $base-color-darker-secondary;
+		transition: all .3s ease;
+	}
+}

@@ -14,6 +14,11 @@ include services/services.pug
 include features/features.pug
 include partners/partners.pug
 include team/team.pug
+include posts/posts.pug
+include projects/projects.pug
+include contacts/contacts.pug
+include offers/offers.pug
+include subscription/subscription.pug
 include contacts/contacts.pug
 include footer/footer.pug
 include scroll-to-top/scroll-to-top.pug
@@ -130,6 +135,68 @@ html(lang="ru")
 					{"src": "team4", "text": "Web designer"}
 				])
 				//end block team
+
+				//block posts
+				+posts([
+					{	"src": "post-img1",
+						"title": "Aliquam metus neque",
+						"desc": "bibendum sit amet porta at, consequat et enim.In ut turpis non ipsum rhoncus porttitor vel ac nunc.Maecenas interdum dignissim lorem quis auctor sit amet nulla nisl, aliquam pretium ipsum.",
+						"datetime": "2016-09-02", "date": "September 02", "comments": "19"
+					},
+					{	"src": "post-img2",
+						"title": "Aliquam metus neque",
+						"desc": "bibendum sit amet porta at, consequat et enim.In ut turpis non ipsum rhoncus porttitor vel ac nunc.Maecenas interdum dignissim lorem quis auctor sit amet nulla nisl, aliquam pretium ipsum.",
+						"datetime": "2016-09-02", "date": "September 02", "comments": "19"
+					},
+					{	"src": "post-img3",
+						"title": "Aliquam metus neque",
+						"desc": "bibendum sit amet porta at, consequat et enim.In ut turpis non ipsum rhoncus porttitor vel ac nunc.Maecenas interdum dignissim lorem quis auctor sit amet nulla nisl, aliquam pretium ipsum.",
+						"datetime": "2016-09-02", "date": "September 02", "comments": "19"
+					}
+				])
+				//end block posts
+
+				//block projects
+				+projects([
+					{"src": "project1", "caption": "Project title"},
+					{"src": "project2", "caption": "Project title"},
+					{"src": "project3", "caption": "Project title"},
+					{"src": "project4", "caption": "Project title"},
+					{"src": "project5", "caption": "Project title"},
+					{"src": "project6", "caption": "Project title"},
+					{"src": "project7", "caption": "Project title"},
+					{"src": "project8", "caption": "Project title"},
+					{"src": "project9", "caption": "Project title"},
+					{"src": "project10", "caption": "Project title"},
+					{"src": "project11", "caption": "Project title"},
+					{"src": "project12", "caption": "Project title"}
+				])
+				//end block projects
+
+				//block offers
+				+offers([
+					{
+						"plan": "Standart", "price": "$39.99",
+						"desc": "Duis mi dolor, fermentum scelerisque mattis sit amet, condimentum sit amet nunc.Cras eros felis tristique sed sagittis id"
+					},
+					{
+						"plan": "The best", "price": "$59.99",
+						"desc": "Duis mi dolor, fermentum scelerisque mattis sit amet, condimentum sit amet nunc.Cras eros felis tristique sed sagittis id"
+					},
+					{
+						"plan": "Premium", "price": "$89.99",
+						"desc": "Duis mi dolor, fermentum scelerisque mattis sit amet, condimentum sit amet nunc.Cras eros felis tristique sed sagittis id"
+					}
+				])
+				//end block offers
+
+				//block subscription
+				+subscription()
+				//end block subscription
+
+				//block	contacts
+				+contacts()
+				//end block	contacts
 
 			+footer({"class": "wow"})
 

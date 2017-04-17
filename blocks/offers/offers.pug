@@ -1,0 +1,13 @@
+mixin offers(items)
+	+b.SECTION.offers
+		+e.DIV.wrap(class="wrapper")
+			+e.H2.title(class="titles") Special
+				+e.STRONG.strong(class="strong")  offers
+			+e.UL.list
+				each item in items
+					+e.item
+						+e.P.plan= item.plan
+						+e.H3.price= item.price
+						+e.P.text= item.desc
+						+b.BUTTON.btn(class="--filled offers__btn", type="button") Take a plan
+

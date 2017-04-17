@@ -173,6 +173,13 @@ $nav : main-nav;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all .4s ease;
+		outline: none;
+		&:hover,
+		&:focus {
+			.#{$nav}__icon {
+				fill: lighten($base-decor-color, 10%);
+			}
+		}
 	}
 
 	&__icon {
